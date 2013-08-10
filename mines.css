@@ -1,0 +1,112 @@
+body {
+ color: #222;
+ font-family: sans;
+ font-size: 62.5%;
+ text-align: center;
+}
+.container {
+ width: 900px;
+ margin: 0 auto;
+ text-align: left;
+}
+.container h1 {
+ font-size: 3.0em;
+ text-align: center;
+}
+.board {
+ text-align: center;
+ width: 500px;
+ float: left;
+}
+.settings {
+ width: 400px;
+ float: left;
+ font-size: 1.6em;
+}
+
+.board table {
+ margin: 0 auto;
+ font-family: sans;
+ font-weight: bold;
+}
+
+.board table td {
+ width: 20px;
+ height: 20px;
+ text-align: center;
+ line-height: 20px;
+}
+
+
+.state-0 {
+ background: #eee;
+ color: #ddd;
+}
+
+.state-1 {
+ background: #eee;
+ color: #888;
+}
+
+.state-2 {
+ background: #eee;
+ color: #080;
+}
+
+.state-3 {
+ background: #eee;
+ color: #088;
+}
+
+.state-4 {
+ background: #eee;
+ color: #0ff;
+}
+
+.state-5 {
+ background: #eee;
+ color: #aa0;
+}
+
+.state-6 {
+ background: #eee;
+ color: #f90;
+}
+
+.state-7 {
+ background: #eee;
+ color: #808;
+}
+
+.state-8 {
+ background: #eee;
+ color: #f0f;
+}
+
+/* boom! */
+.state-9 {
+ background: #eee;
+ color: #f00;
+}
+
+/* unexplored */
+.state-10 {
+ background: #777;
+}
+
+/* marked */
+.state-11 {
+ background: #f00;
+}
+
+/* cheat */
+.state-12 {
+ background: #0f0;
+}
+
+.win {
+ color: #0f0;
+}
+.lose {
+ color: #f00;
+}

@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+   <link rel="stylesheet" type="text/css" href="mines.css">
+</head>
+<body ng-app="mines">
+   <div class="container" ng-controller="MinesCtrl">
+      <h1 ng-show="gameIsDone == 0">Mines</h1>
+      <h1 class="lose" ng-show="gameIsDone == -1">YOU LOSE</h1>
+      <h1 class="win" ng-show="gameIsDone == 1">YOU WIN!</h1>
+
+      <div class="board">
+         <p>
+            <button ng-click="handleReset()">New Game</button>
+            <button ng-click="handleCheck()">Check</button>
+            <button ng-click="handleCheat()">Cheat</button>
+         </p>
+
+         <table>
+            <tr ng-repeat="row in state">
+               <td ng-right-click="handleRightClick($event)" ng-click="handleClick($event)" ng-repeat="cell in row" id="{{ cell['id'] }}" class="state-{{ cell['state'] }}">{{ cell['content'] }}</td>
+            </tr>
+         </table>
+      </div>
+      <div class="settings">
+         <h2>Settings</h2>
+         <p><input size="2" ng-model="width" ng-change="handleSettings()" />x<input size="2" ng-model="height" ng-change="handleSettings()" /></p>
+         <p>Num Mines: <input size="3" ng-model="numMines" ng-change="handleSettings()" /></p>
+
+         <h2>Instructions</h2>
+         <p>This is minesweeper. The object of the game is to avoid clicking on a mine. This is done by exploration, but exploration reveals clues as to where the mines are. If a number (N) appears on the board, that means that there are N mines adjacent to the cell.</p>
+
+         <p>When you think you know where a mine is, Right-Click on the cell to mark it as such, and when you've marked all of them, click the "Check" button to see if you're right!</p>
+
+         <p>Oh, and you can cheat if you aren't very good</p>
+      </div>
+   </div>
+   <script type="text/javascript" src="angular.min.js"></script>
+   <script type="text/javascript" src="mines.js"></script>
+</body>
+</html>
